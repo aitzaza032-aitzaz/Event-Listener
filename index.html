@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <h1>Event Listner</h1>
+
+  <button id="btn">click me</button>
+
+  <div id="para">
+
+      i am gul wali khan
+
+
+  </div>
+  <input type="text" name="" id="name">
+
+
+  <form id="weatherf">
+
+  
+    <label for="name">city name</label></div>
+    <input type="text" name="weatherf" id="weatherf">
+    <button type="submit">check</button>
+
+  </form>
+  <div id="weatherres"></div>
+
+  <script>
+   
+   const formRef=document.querySelector("#weatherf");
+      formRef.addEventListener("submit", (e) =>
+    { 
+      e.preventDefault();
+      alert("form sumitted");
+      const weatherresRef=document.querySelector("#weatherres");
+      weatherresRef.textContent="Today lahore weather is 37 degree centigrade"
+    });
+
+    
+    
+    const btnRef=document.querySelector("#btn");
+      btnRef.addEventListener("click", ()=>
+    {
+      alert("someone clicked");
+    })
+
+    const paraRef=document.querySelector("#para")
+    paraRef.addEventListener("copy",(e)=>{
+      alert("he is coping")
+    })
+
+    const inputRef=document.querySelector("#name")
+    inputRef.addEventListener("focus",()=>
+  {
+     console.log("focus done")
+  })
+
+
+  </script>
+</body>
+</html>
